@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" value="" id="txtvalue" name="txtvalue" />
+        <button type="button" onclick="calcula(document.getElementById('txtvalue').value)">Reajustar</button>
+        </div>
+        <p id="reposta"></p>
+
+    <script>
+ 
+
+function calcula(value)
+{
+    por = 0;
+    value = parseFloat(value);    
+    if (value <=280)
+    {
+    	por = 20;
+    }
+    else if (value > 280 && value <= 700)
+    {
+    	por = 15;
+    }
+    else if (value > 700 && value <= 1500)
+    {
+    	por = 10;
+    }
+    else if (value > 1500)
+    {
+    	por = 5;
+    }
+    resp = value + ((value * por) / 100);
+    document.getElementById("reposta").innerHTML = resp;
+    return resp;
+}
+
+
+
+
+    </script>
+</body>
+</html>

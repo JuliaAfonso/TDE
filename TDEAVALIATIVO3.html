@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<input  type = "number" id = "altura" placeholder = " informe a altura " />
+<input type="radio" id="masculino" name="opcao" />MASCULINO
+<input type="radio" id="feminino" name="opcao" />FEMININO<br><br>
+
+<button id="botao1" onclick="calcular()">Jogar</button>
+
+
+
+<body>
+    <script>
+function calcular(){
+
+    var arraypesoIdealHomem= document.getElementById("masculino")
+     arraypesoIdealHomem= 72.7*(document.getElementById("altura").value)-58
+        alert(`O peso ideial do homem é ${arraypesoIdealHomem}`)
+       
+       
+   
+       
+     var arraypesoIdealMulher=document.getElementById("feminino")
+       if( arraypesoIdealMulher=62.1*(document.getElementById("altura").value)-44.7){
+        alert(`O peso ideal da mulher é ${arraypesoIdealMulher}`)
+       }
+       
+
+
+
+}
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
